@@ -1,9 +1,8 @@
-import React, { Component } from "react";
+import React from "react";
 import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
 
 import { Word } from "../../components";
-import { Box } from "@material-ui/core";
 
 const useStyles = makeStyles({
   container: {
@@ -38,6 +37,7 @@ const WordList = (props) => {
     { french: "À", persian: "Bé", arabic: "به", nature: "préposition" },
     { french: "Dans", persian: "Dar", arabic: "در", nature: "préposition" },
     { french: "Avec", persian: "Bâ", arabic: "با", nature: "préposition" },
+    { french: "Et", persian: "Va / o", arabic: "و", nature: "conjonction" },
     { french: "Un", persian: "Yek", arabic: "یک", nature: "nombre" },
     { french: "Deux", persian: "Do", arabic: "دو", nature: "nombre" },
     { french: "Trois", persian: "Sé", arabic: "سه", nature: "nombre" },
@@ -65,20 +65,17 @@ const WordList = (props) => {
       nature: "verbe",
     },
     {
-      french: "Être",
-      persian: "Boudan/bâsh",
-      arabic: "باﺵ/بودن",
+      french: "Aller",
+      persian: "Raftan/Rav",
+      arabic: "رو/رفتن",
       nature: "verbe",
     },
     {
-      french: "À (direction, attribution)",
-      persian: "Bé",
-      arabic: "به",
+      french: "Dire",
+      persian: "Goftan/gou(y)",
+      arabic: "گو(اﺵ/گفتن",
       nature: "verbe",
     },
-    { french: "Bonjour", persian: "Salâm", arabic: "سلام", nature: "nom" },
-    { french: "Chat", persian: "Gorbe", arabic: "گربه", nature: "nom" },
-    { french: "Dehors", persian: "Biroun", arabic: "پرون", nature: "adverbe" },
   ];
 
   return (
