@@ -8,8 +8,11 @@ import { COLOURS } from "../../config/colours";
 const useStyles = makeStyles({
   root: {
     display: "flex",
-    minWidth: 600,
+    // minWidth: 600,
     margin: 16,
+    // alignSelf: "stretch",
+    maxWidth: 800,
+    flex: 1,
   },
   leftBanner: { width: 16 },
   textContainer: {

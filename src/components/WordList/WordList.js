@@ -3,6 +3,7 @@ import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
 
 import { Word } from "../../components";
+import { Box } from "@material-ui/core";
 
 const useStyles = makeStyles({
   container: {
@@ -10,6 +11,11 @@ const useStyles = makeStyles({
     flexDirection: "column",
     alignItems: "center",
     padding: 24,
+  },
+  box: {
+    display: "flex",
+    justifyContent: "center",
+    alignSelf: "stretch",
   },
 });
 
@@ -20,8 +26,8 @@ const WordList = (props) => {
     { french: "Homme", persian: "Mard", arabic: "مرد", nature: "nom" },
     { french: "Eau", persian: "Âb", arabic: "اب", nature: "nom" },
     { french: "Marché", persian: "Bâzâr", arabic: "بازار", nature: "nom" },
-    { french: "Garçon", persian: "Bâzâr", arabic: "پسر", nature: "nom" },
-    { french: "Fils", persian: "Bâzâr", arabic: "پسر", nature: "nom" },
+    { french: "Garçon", persian: "Pesar", arabic: "پسر", nature: "nom" },
+    { french: "Fils", persian: "Pesar", arabic: "پسر", nature: "nom" },
     { french: "Père", persian: "Pedar", arabic: "پدر", nature: "nom" },
     { french: "Pain", persian: "Nân", arabic: "نان", nature: "nom" },
     { french: "Ami", persian: "Doust", arabic: "دوست", nature: "nom" },
@@ -42,13 +48,11 @@ const WordList = (props) => {
     { french: "Deux", persian: "Do", arabic: "دو", nature: "nombre" },
     { french: "Trois", persian: "Sé", arabic: "سه", nature: "nombre" },
     { french: "Quatre", persian: "Chahâr", arabic: "چهار", nature: "nombre" },
-    { french: "Quatre", persian: "Chahâr", arabic: "چهار", nature: "nombre" },
     { french: "Cinq", persian: "Panj", arabic: "پنج", nature: "nombre" },
     { french: "Six", persian: "Chéch", arabic: "شش", nature: "nombre" },
     { french: "Sept", persian: "Haft", arabic: "هفت", nature: "nombre" },
     { french: "Huit", persian: "Hacht", arabic: "هشت", nature: "nombre" },
     { french: "Neuf", persian: "Noh", arabic: "نه", nature: "nombre" },
-    { french: "Dix", persian: "Noh", arabic: "ده", nature: "nombre" },
     { french: "Dix", persian: "Noh", arabic: "ده", nature: "nombre" },
     { french: "Moi/Je", persian: "Man", arabic: "من", nature: "pronom" },
     { french: "Toi/Tu", persian: "To", arabic: "تو", nature: "pronom" },
@@ -83,12 +87,14 @@ const WordList = (props) => {
       {words ? (
         <Grid className={classes.container}>
           {words.map((currentWord) => (
-            <Word
-              main={currentWord.french}
-              translation={currentWord.persian}
-              written={currentWord.arabic}
-              nature={currentWord.nature}
-            />
+            <Box className={classes.box}>
+              <Word
+                main={currentWord.french}
+                translation={currentWord.persian}
+                written={currentWord.arabic}
+                nature={currentWord.nature}
+              />
+            </Box>
           ))}
         </Grid>
       ) : (
