@@ -8,9 +8,7 @@ import { COLOURS } from "../../config/colours";
 const useStyles = makeStyles({
   root: {
     display: "flex",
-    // minWidth: 600,
     margin: 16,
-    // alignSelf: "stretch",
     maxWidth: 800,
     flex: 1,
   },
@@ -41,7 +39,7 @@ const Word = (props) => {
   };
 
   return (
-    <Paper raised={true} elevation={3} className={classes.root}>
+    <Paper elevation={3} className={classes.root}>
       <Box
         className={classes.leftBanner}
         style={{ backgroundColor: wordNatureToColour[props.nature] }}

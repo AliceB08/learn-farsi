@@ -1,1 +1,2 @@
-export { default as TranslationPage } from "./Translation/Translation";
+export { default as Home } from "./Home/Home";
+export { default as Vocabulary } from "./Vocabulary/Vocabulary";
